@@ -1,0 +1,22 @@
+ALGORITHM checkpoint
+VAR
+nv, nc,nw :INTEGER
+BEGIN
+nv := 0;
+nc := 0;
+nw := 0;
+	WHILE (c <> '.') DO
+		READ(c);
+		nc := nc + 1;
+		IF (c = 'a') OR (c = 'e') OR (c = 'i') OR (c = 'o') OR (c = 'u') OR (c = 'A') OR (c = 'E') OR (c = 'I') OR (c = 'O') OR (c = 'U') THEN
+			nv := nv + 1;
+		END_IF
+		IF (c = ' ') THEN
+			nw := nw + 1;
+		END_IF
+	END_WHILE
+nw := nw + 1;
+WRITE("The length of the sentence is ", nc);
+WRITE("The number of words in the sentence is ", nw);
+WRITE("The number of vowels in the sentence is ", nv);
+END
